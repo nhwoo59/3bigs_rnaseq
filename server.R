@@ -41,7 +41,15 @@ server <- function(input, output) {
     
     countdata <- as.matrix(countdata)
     
-    (condition <- factor(c(rep("con", 2), rep("DOX", 2))))
+    # condition parsing
+    g <- gsub("[0-9]*$","",colnames(countdata)) # Remove all numbers from end
+    #g = gsub("_Rep|_rep|_REP","", g)
+    g <- gsub("_$", "", g); # remove "_" from end
+    g <- gsub("_Rep$", "", g); # remove "_Rep" from end
+    g <- gsub("_rep$", "", g); # remove "_rep" from end
+    g <- gsub("_REP$", "", g)  # remove "_REP" from end
+    
+    (condition <- factor(g))
     
     library("DESeq2")
     
