@@ -10,7 +10,7 @@ server.R
 
 librarySetup.R
 
-example-input.txt
+example-input files
 
 Dockerfile
 
