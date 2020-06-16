@@ -4,7 +4,7 @@ MAINTAINER woo "nhwoo@3bigs.com"
 
 RUN echo "Welcome to thedam!" > tmp/hello
 
-RUN yum install -y git
+# RUN yum install -y git
 
 RUN yum install epel-release
 
