@@ -8,6 +8,10 @@ RUN yum install -y git
 
 RUN git clone https://github.com/nhwoo59/thedam.git
 
+RUN yum install epel-release
+
+RUN yum install R
+
 COPY example-input.count /root/ 
 
 COPY example-input_2 /root/ 
